@@ -3,17 +3,11 @@ Student Grade List Program
 
 This program allows users to enter student names and grades, validates the inputs,
 and displays the list of students with their grades, highlighting the highest and lowest grades.
+
 """
 
 # Display the current student grade list, with the highest and lowest grade
 def student_grade_list(student_name,student_grade):
-    """
-    Displays the current list of students with their grades, including the highest and lowest grades.
-
-    Args:
-        student_name (list): A list of student names.
-        student_grade (list): A list of corresponding student grades.
-    """
     print("\n---Student Grade---")
     # Print students' name with its corresponding grade
     for i, name in enumerate(student_name):
@@ -27,13 +21,6 @@ def student_grade_list(student_name,student_grade):
 
 # Validate name - reject empty name, spaces only and non-alphabet name
 def get_valid_name():
-    """
-    Prompts the user to enter a student name and validates it.
-    Rejects empty names, names with only spaces, and names containing numbers or symbols.
-
-    Returns:
-        str: A valid student name in title case.
-    """
     while True:
         input_name = input("Enter name : ")
         # Checking if the user put an empty name or spaces only
@@ -48,13 +35,6 @@ def get_valid_name():
 
 # Validate grade - reject float number, grade below 0 and above 100
 def get_valid_grade():
-    """
-    Prompts the user to enter a student grade and validates it.
-    Rejects non-integer inputs, floats, and grades outside the range 0-100.
-
-    Returns:
-        int: A valid student grade between 0 and 100.
-    """
     while True :
         input_grade = input("Enter grade : ")
         try :
@@ -75,13 +55,6 @@ def get_valid_grade():
 
 # Validate choice - reject anything beside "Y" and "N"
 def get_valid_choice():
-    """
-    Prompts the user to choose whether to exit the program and validates the input.
-    Accepts only 'Y' or 'N' (case-insensitive).
-
-    Returns:
-        str: 'Y' or 'N' indicating the user's choice.
-    """
     while True :
         exit_program = input("Exit program? [Y/N]\n").title()
         if exit_program == "Y" or exit_program == "N":
